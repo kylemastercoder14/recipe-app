@@ -94,7 +94,7 @@ const SearchPage = ({
             </div>
           ) : meals.length === 0 ? (
             <div className="flex justify-center items-center mt-10">
-              <p className="text-xl font-semibold">No results found for '{searchKeyword}'</p>
+              <p className="text-xl font-semibold">No results found for &apos;{searchKeyword}&apos;</p>
             </div>
           ) : (
             <div className="flex justify-center items-center mt-10 gap-x-4 md:gap-y-16 gap-y-10 flex-wrap">
