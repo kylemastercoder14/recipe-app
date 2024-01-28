@@ -92,8 +92,8 @@ const SingleMeal = ({
       </div>
       <div className="flex flex-col md:px-20 px-5 py-10">
         <p className="text-3xl font-bold">Meal Details</p>
-        {meals.map((meal) => (
-          <Card className="mt-10 dark:bg-zinc-800/90 bg-gray-100 shadow-lg">
+        {meals.map((meal, index) => (
+          <Card className="mt-10 dark:bg-zinc-800/90 bg-gray-100 shadow-lg" key={index}>
             <CardContent>
               <div className="grid md:grid-cols-2 grid-cols-1 gap-10 md:p-10 p-5">
                 <Image src={meal.strMealThumb} className="rounded-md" alt={meal.strMeal} width={800} height={500} />
@@ -213,11 +213,12 @@ const SingleMeal = ({
                     <Skeleton className="w-80 mt-3 bg-gray-300 dark:bg-zinc-800 shadow-md h-10" />
                   </div>
                 ))
-              : randomMeals.map((meal) => (
+              : randomMeals.map((meal, index) => (
                   <CarouselItem key={meal.idMeal} className="pl-1 lg:basis-1/5">
                     <Link
                       href={`/meals/${meal.idMeal}`}
                       className="relative flex flex-col items-center gap-3"
+                      key={index}
                     >
                       <Image
                         src={meal.strMealThumb}
