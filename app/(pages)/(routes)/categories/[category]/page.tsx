@@ -96,10 +96,10 @@ const CategoryPage = ({
                     <Skeleton className="w-60 mt-3 bg-gray-300 dark:bg-zinc-800 shadow-md h-10" />
                   </div>
                 ))
-              : meals.map((meal) => (
+              : meals.map((meal, index) => (
                   <Link
                     href={`/meals/${meal.idMeal}`}
-                    key={meal.strMeal}
+                    key={index}
                     className="flex flex-col items-center gap-3 md:w-80 w-44 h-44 md:h-80 hover:scale-105 transition"
                   >
                     <Image
