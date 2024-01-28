@@ -96,9 +96,9 @@ const HomePage = () => {
                   <Skeleton className="w-60 mt-3 bg-gray-300 dark:bg-zinc-800 shadow-md h-10" />
                 </div>
               ))
-            : categories.map((category) => (
+            : categories.map((category, index) => (
                 <CarouselItem
-                  key={category.strCategory}
+                  key={index}
                   className="pl-1 lg:basis-1/6"
                 >
                   <Link href={`/categories/${encodeURIComponent(category.strCategory)}`} className="flex flex-col items-center gap-3 hover:scale-110 transition">
@@ -132,8 +132,8 @@ const HomePage = () => {
                     <Skeleton className="w-80 mt-3 bg-gray-300 dark:bg-zinc-800 shadow-md h-10" />
                   </div>
                 ))
-              : randomMeals.map((meal) => (
-                  <CarouselItem key={meal.idMeal} className="pl-1 lg:basis-1/5">
+              : randomMeals.map((meal, index) => (
+                  <CarouselItem key={index} className="pl-1 lg:basis-1/5">
                     <Link href={`/meals/${meal.idMeal}`} className="relative flex flex-col items-center gap-3 hover:scale-105 transition">
                       <Image
                         src={meal.strMealThumb}
@@ -167,8 +167,8 @@ const HomePage = () => {
                     <Skeleton className="w-80 mt-3 bg-gray-300 dark:bg-zinc-800 shadow-md h-10" />
                   </div>
                 ))
-              : areaMeal.map((meal) => (
-                  <CarouselItem key={meal.idMeal} className="pl-1 lg:basis-1/5">
+              : areaMeal.map((meal, index) => (
+                  <CarouselItem key={index} className="pl-1 lg:basis-1/5">
                     <Link href={`/meals/${meal.idMeal}`} className="flex flex-col items-center gap-3 hover:scale-105 transition">
                       <Image
                         src={meal.strMealThumb}
