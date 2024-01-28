@@ -214,11 +214,10 @@ const SingleMeal = ({
                   </div>
                 ))
               : randomMeals.map((meal, index) => (
-                  <CarouselItem key={meal.idMeal} className="pl-1 lg:basis-1/5">
+                  <CarouselItem key={index} className="pl-1 lg:basis-1/5">
                     <Link
                       href={`/meals/${meal.idMeal}`}
                       className="relative flex flex-col items-center gap-3"
-                      key={index}
                     >
                       <Image
                         src={meal.strMealThumb}
