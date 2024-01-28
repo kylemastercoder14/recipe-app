@@ -1,6 +1,6 @@
 # Fullstack Recipe Application: Next.js 14, React, Shadcn UI, Meal DB API, Tailwind, Clerk Auth | Full Course 2024
 
-![Copy of Copy of Copy of Fullstack Twitter Clone (5)](https://github.com/AntonioErdeljac/next13-discord-clone/assets/23248726/14e25e4f-eb83-44dd-8b97-4f2666b89386)
+![Copy of Copy of Copy of Fullstack Twitter Clone (5)](https://github.com/kylemastercoder14/recipe-app/blob/21280ba58ae2fa4942994cf3add1251e4aad2c28/public/RECIPE.png)
 
 This is a repository for Fullstack Recipe Application: Next.js 14, React, Shadcn UI, Meal DB API, Tailwind, Clerk Auth | Full Course 2024
 
