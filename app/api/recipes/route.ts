@@ -32,19 +32,3 @@ export async function POST(req: Request) {
         return new NextResponse("Internal Error", { status: 500 });
     }
 };
-
-export async function GET(res: Response) {
-  try {
-    const profile = await currentProfile();
-    
-    if (!profile) {
-      return new NextResponse("Unauthorized", { status: 401 });
-    }
-
-    const allRecipe = await db.recipe.findMany();
-    return NextResponse.json(allRecipe);
-  } catch (error) {
-    console.log("[RECIPE_GET]", error);
-    return new NextResponse("Internal Error", { status: 500 });
-  }
-}
