@@ -98,10 +98,10 @@ const SearchPage = ({
             </div>
           ) : (
             <div className="flex justify-center items-center mt-10 gap-x-4 md:gap-y-16 gap-y-10 flex-wrap">
-              {meals.map((meal) => (
+              {meals.map((meal, index) => (
                 <Link
                   href={`/meals/${meal.idMeal}`}
-                  key={meal.strMeal}
+                  key={index}
                   className="flex flex-col items-center gap-3 md:w-80 w-44 h-44 md:h-80"
                 >
                   <Image
